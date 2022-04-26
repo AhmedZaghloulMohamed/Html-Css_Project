@@ -1,0 +1,853 @@
+/* 
+    1-Common Styles
+    2- General Styles
+    3-Sections
+        /* 3.0Header section */
+        /* 3.1About section */
+        /* 3.2Portfolio section */
+        /* 3.3Services section */
+        /* 3.4Prices section */
+        /* 3.5Team section */
+        /* 3.6Blog Page */
+        /* 3.7Contact section */ 
+ */
+ /* Common Style */
+/*
+    1- container
+    2-overlay
+    3- opacity hover
+    4- section header
+    5- section padding
+    6- hover effect 1 (left to right)
+    7- hover effect 2 (top to bottom)
+
+ */
+
+
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+body { 
+     font-family: 'Varela Round',sans-serif;
+     margin: 0;
+     padding: 0;
+
+ }
+
+ .container {
+     width: 80%;
+     margin: auto;
+ }
+
+ button{
+     font-family: inherit;
+ }
+
+ .header {
+     position: fixed;
+     width: 100vw;
+     height: 10vh;
+     z-index: 1;
+     background: rgba(0, 0,0, 0.5);
+ }
+
+ a{
+     text-decoration: none;
+ }
+ 
+ .pd-y{
+     padding: 30px 0 0 0 ;
+ }
+
+ .LtrEffect{
+     position: relative;
+ }
+
+ .LtrEffect:after{
+     position: absolute;
+     content: "";
+     width: 0%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     background-color: rgba(0, 0,0, 0.3);
+     transition: width 0.5s;
+     z-index: -1;
+ }
+
+ .LtrEffect:hover:after {
+     width: 100%;
+     height: 100%;
+
+ }
+/* Header Section */
+ .secHeader{
+     text-align: center;
+     margin-bottom: 20px;
+ }
+
+ .secHeader .secTitle{
+     font-size: 35px;
+     text-transform:capitalize ;
+     margin-bottom: 10px;
+ }
+
+ .secHeader .secLine{
+     display: block;
+     height: 5px;
+     width: 60px;
+     margin: 0 auto 70px auto;
+     background-color: #6195ff;
+ }
+
+ .header .logo{
+     width: 35%;
+     float: left;
+     padding-top: 5px;
+ }
+
+ .header .logo img{
+     width: 20%;
+     margin-top: 15px;
+ }
+
+ .header .navList{
+    width: 60%;
+    float: left;
+    text-align: right;
+    list-style: none;
+  }
+ 
+
+ .header .clear {
+    clear: both;
+ }
+
+ .header .navList > li{
+    display: inline-block;
+    text-align: right;
+ }
+ 
+ .header .navList > li a{
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    display: block;
+    padding: 15px 15px;
+    
+ }
+
+ .header .navList > li > a:after,
+ .header .navList > li > a.active:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color:#6195ff;
+    margin-top: 2px;
+    transition: 0.5s;
+   }
+   
+
+.header .navList > li > a:after{
+ width: 0;
+}
+
+.header .navList > li > a:hover:after{
+    width: 100%;
+}
+
+
+.dropDown{
+    position: relative;
+}
+.dropDownMenu{
+    position: absolute;
+    width: 100px;
+    background-color: #6195ff;
+    list-style: none;
+    text-align: left;
+    top: 80%;
+    left: -50%;
+    vertical-align: top;
+    transition: opacity 0.4s,visibility 0.6s ;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dropDownMenu a{
+    color: #fff;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropDown:hover .dropDownMenu{
+    opacity: 1;
+    visibility: visible;
+
+}
+
+ /* Home section */
+ 
+.home{
+     background-image: url('../images/background/background1.webp');
+     height: 100vh;
+     background-size: cover;
+     /* background-repeat: no-repeat; */
+     position: relative;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0,0, 0.4);
+}
+
+.homeContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 60%;
+    height: 30%;
+}
+
+.homeContent .titleHome{
+    color: #fff;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: -7px;
+    word-spacing: 2px;
+}
+
+.homeDesc{
+    margin: 10px 0px;
+    color: #fff;
+    word-spacing: -1px;
+    line-height: 1.5;
+}
+
+.homeContent .btn{
+    min-width: 160px;
+    padding: 15px 0px;
+    border-radius: 5px;
+    border:0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.homeContent .btn-start{
+    margin-right: 10px;
+    background-color: #fff;
+}
+
+.homeContent .btn-learn{
+    background-color: #6195ff;
+    color: #ffff;
+}
+
+.hover-opacity{
+    transition: opacity 0.5s;
+}
+
+.hover-opacity:hover{
+    opacity:0.7;
+}
+
+ /* About section */
+
+ .about{
+    margin: auto;
+ }
+
+ .about .aboutItems{
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 2%;
+    margin-left:2% ;
+    border: 1px solid #e8e8e8;
+ }
+
+ .about .aboutItems .itmsTitle{
+    text-transform: capitalize;
+    transition: color 0.5s;
+}
+
+.about .aboutItems .itemDesc{
+    line-height: 1.4;
+    
+}
+
+.about .aboutItems a{
+    color: #6195ff;
+}
+
+.about .aboutItems i{
+    color: #6195ff
+}
+
+.about .aboutItems:hover .itmsTitle{
+    color:#fff;
+}
+ 
+.clear{
+     clear: both;
+ }
+ /* Portfolio section */
+
+ .portfolio{
+  background-color: #f9f9f9;
+}
+
+.portfolio .portfolioContent{
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio .portfolioContent .portfolioItems{
+    float: left;
+    width: 25%;
+    height: 30vh;
+    margin-bottom: 1%;
+    padding: 2%;
+    border: 1px solid #e5e5e5;
+    margin-left:2%;
+    position: relative;
+}
+
+.portfolio .portfolioItems img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.portfolioItems .PortfolioLayer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0, 0,0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s , visibility 0.5s;
+}
+
+.portfolioItems:hover .PortfolioLayer{
+    opacity: 1;
+    visibility: visible;
+}
+
+.PortfolioLayer .layerContent{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%,-50%);
+    color: #ffff;
+    text-align: center;
+    visibility: hidden;
+    transition: top 0.5s,visibility 0.6s;
+}
+
+.PortfolioLayer:hover .layerContent{
+    visibility: visible;
+    top: 50%;
+}
+
+
+
+.layerContent .category{
+    color: #6195ff;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+
+.layerContent .h3category{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.layerContent a{
+    color: #fff;
+}
+
+.layerContent a i{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 40px;
+    background-color: #6195ff;
+}
+
+
+ /* Services section */
+
+ .offerItem{
+     
+     float: left;
+     width: 25%;
+     /* here i do padding more from left 
+     to move the icon to the left corner by position
+     */
+     padding: 1% 1% 1% 4%;
+     margin: 1% 1%;
+     border: 1px solid #e8e8e8;
+     position: relative;
+ }
+
+ .offerItem .icon{
+     position: absolute;
+     left: 2%;
+     top: 20%;
+     color: #6195ff;
+ }
+
+ .offerItem .oferTitle{
+     text-transform: capitalize;
+ }
+
+ .offerItem p{
+     color: cadetblue;
+ }
+ .offerItem:hover .oferTitle,
+ .offerItem:hover p{
+     color: #fff;
+ }
+
+ /*Service Section */
+
+.service{
+    background-color: #f9f9f9;
+}
+
+.serviceItem{
+    width: 45%;
+    float: left;
+    padding: 2%;
+    margin-right: 1%;
+}
+
+.service .left .secHeader .secTitle{
+    text-align: left;
+}
+.service .left .secHeader .secLine{
+    margin: 0;
+    width: 63%;
+}
+
+.serviceItem .leftDesc{
+    padding-right: 20px;
+    color: #9999;
+    line-height: 1.8;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.serviceItem .serviceList{
+    list-style: none;
+}
+
+.serviceItem .serviceList i{
+    border: 1px solid #6195ff;
+    width: 15px;
+    height: 15px;
+    color: #6195ff;
+    padding: 5px;
+    border-radius: 50%;
+    margin-bottom: 1%;
+    color: #999;
+}
+
+.service .right img{
+    width: 100%;
+}
+
+.service .right .Service-bollets{
+    list-style: none;
+    text-align: center;
+}
+
+.service .right li{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #e8e8e8;
+    margin: 10px 5px;
+    border-radius: 50%;
+}
+
+.service .Service-bollets li.active{
+    background-color: #6195ff;
+}
+.service .Service-bollets li:hover {
+    background-color: #6195ff;
+}
+
+
+/* statistics */
+.statistics{
+    height: 250px;
+    position: relative;
+}
+.statistics .statLayer{
+    background-image: url('../images/background/background3.webp');
+    position: absolute;
+    width: 100%;
+    height:100%;
+}  
+
+.statLayer .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.statLayer .statContent{
+    float: left;
+    width: 23%;
+    text-align: center;
+    margin-left:1%;
+}
+
+.statistics .statContent i, .statistics .statContent p{
+    color: #6195ff;
+    font-size: 20px;
+}
+
+
+.statistics .statContent h3{
+    font-weight: bold;
+    font-size: 25px;
+    color: #fff;
+}
+
+.statistics .statContent p{
+    text-transform: capitalize;
+}
+
+ /* Prices section */
+
+
+ .pricing .priceLayer{
+     height: 40vh;
+ }
+
+ .priceLayer .container{
+     position: relative;
+     height: 100%;
+     text-align: center;
+ }
+.priceLayer .priceContent{
+     position: absolute;
+     width: 100%;
+     margin: auto;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     text-align: center;
+ }
+ .priceContent .prices{
+     float: left;
+     width: 21%;
+     margin: auto;
+     margin-right: 5%;
+     margin-left :5% ;
+     border: 1px solid #6195ff;
+     padding: 2% 1%;
+     text-align: center;
+ }
+
+ .prices .priceText{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #999;
+ }
+
+ .prices .permonth{
+     width: 80px;
+     height: 80px;
+
+     padding: 10px 0; 
+     margin: 10px auto;
+     border: 2px solid #6195ff;
+     border-radius: 50%;
+ }
+
+ .permonth .dollar{
+     font-size: 20px;
+     font-weight: bold;
+ }
+
+ .permonth .month{
+     font-weight: bolder;
+     margin: 0;
+     padding: 0;
+ }
+ .prices ul{
+     list-style: none;
+ }
+
+ .prices ul li{
+    color: #999;
+    line-height: 1.5;
+ }
+
+.prices button{
+    background-color: #fff;
+    color: #6195ff;
+    border: 0;
+    display:block;
+    width: 140px;
+    margin: auto;
+    padding: 10px;
+    margin: 15px auto 0 auto;
+    border: 1px solid #6195ff;
+    font-size: 17px;
+    border-radius: 7%;
+}
+
+
+/* top to buttom effect */
+.tTBoEffect{
+    position: relative;
+}
+
+.tTBoEffect:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0,0, 0.3);
+    transition: height 0.5s;
+    z-index: -1;
+}
+
+.tTBoEffect:hover:after {
+    height: 100%;
+}
+
+/* testinomial */
+.testinomial{
+    position: relative;
+
+    background-image: url(../images/background/background3.webp);
+    background-attachment: fixed;
+    height: 400px;
+}
+
+
+.testin-content{
+    overflow: hidden;
+    padding: 120px 0;
+    width: 80%;
+    margin: auto;
+}
+
+.testonimial-item{
+    float: left;
+    width: 45%;
+    color: #fff;
+    margin: 1%;
+}
+
+.testonimial-item .top{
+    padding: 5px 2px 20px 100px;
+    position: relative;
+}
+
+.testonimial-item .top img{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.testonimial-item .top h3{
+    margin: 0;
+    padding: 10px 0 3px 0;
+}
+
+.testonimial-item .top span{
+    color: #6195ff;
+}
+
+.testonimial-item .top p{
+    line-height: 1.5px;
+    font-size: 17px;
+}
+
+/* ourTeam */
+.taem{
+    margin: auto;
+}
+.teamitem{
+    width: 27%;
+    margin: auto;
+    float: left;
+    background-color: #e8e8e8;
+    padding: 20px 10px;
+    margin: 0.5%;
+    text-align: center;
+}
+
+.teamitem .teamImg{
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.teamImg .teamOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0,0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s,visibility 0.5s;
+}
+
+.teamitem:hover .teamOverlay{
+    opacity: 1;
+    visibility: visible;
+}
+
+.teamitem:hover .name{
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.teamitem:hover .title{
+    color: #6195ff;
+    transition: color 0.3s;
+}
+
+.teamitem.tTBoEffect{
+    z-index: 1;
+}
+
+.teamOverlay a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #6195ff;
+    color: #fff;
+    margin-left:auto;
+}
+.teamOverlay a i{
+    line-height: 40px;
+}
+
+.teamImg img{
+    width: 100%;
+}
+
+.teamitem .name{
+    color: #222;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: color 0.3s;
+    
+}
+
+ /* recent news */
+
+ .recent{
+     background-color: #f8f8f8;
+     margin: auto;
+ }
+
+ .recent .recentItems{
+     width: 27%;
+     float: left;
+     margin-left: 4%;
+     background-color: #fff;
+ }
+
+ .recentItems img{
+     width: 100%;
+ }
+
+ .recentItems .info{
+     padding: 5%;
+ }
+ .recentItems ul{
+     list-style: none;
+ }
+
+ .recentItems ul li{
+     display: inline-block;
+     margin: 5px;
+   }
+
+   .recentItems ul li i{
+       color: #6195ff;
+       margin-right: 5px;
+   }
+   .recentItems h3{
+       font-weight: bold;
+   }
+   .recentItems p{
+       line-height: 1.5;
+       color: #999;
+   }
+   .recentItems a{
+       text-decoration: underline;
+       color: #6195ff;
+   }
+
+ 
+
+/* footer section */
+.footer{
+    background-color: darkblue;
+    text-align: center;
+    color: #fff;
+}
+
+.footer a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: #6195ff;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.footer a i{
+    line-height: 40px;
+
+}
+.footer p{
+    margin-bottom: 20px;
+}
+
+.footer .copy{
+    color: #999;
+    font-size: 17px;
+    text-transform:uppercase;
+}
+ /* Blog Page */
+ /* Contact section */
